@@ -13,7 +13,8 @@ public class WordList
     /* to be implemented in part (a) */
     int count = 0;
     for(int i = 0; i < myList.size(); i++){
-      if(myList.get(i).size() == len){
+      String word = (String) myList.get(i);
+      if(word.length() == len){
         count++;
       }
     }
@@ -23,10 +24,15 @@ public class WordList
   public void removeWordsOfLength(int len)
   {
     /* to be implemented in part (b) */
-    for(int i = myList.size(); i > 0; i--){
-      if(myList.get(i).size() == len){
+    int i = 0;
+    while(i < myList.size()){
+      String word = (String) myList.get(i);
+      if(word.length == len){
         myList.remove(i);
   }
+      else{
+        i++;
+      }
  }
 }
 }

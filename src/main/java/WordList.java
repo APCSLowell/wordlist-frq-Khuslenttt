@@ -27,7 +27,7 @@ public class WordList
     int i = 0;
     while(i < myList.size()){
       String word = (String) myList.get(i);
-      if(word.length == len){
+      if(word.length() == len){
         myList.remove(i);
   }
       else{
